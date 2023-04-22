@@ -26,7 +26,8 @@
 				"eamodio.gitlens",
 				"streetsidesoftware.code-spell-checker",
 				"GitHub.vscode-pull-request-github",
-				"tamasfe.even-better-toml"
+				"tamasfe.even-better-toml",
+				"ryanluker.vscode-coverage-gutters"
 			]
 		}
 	},

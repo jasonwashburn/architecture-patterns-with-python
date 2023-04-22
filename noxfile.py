@@ -20,7 +20,14 @@ def test(session) -> None:
     session.install("pytest")
     session.install("pytest-xdist")
     session.install("pytest-cov")
-    session.run("pytest", "--cov", "--cov-report", "term-missing")
+    session.run(
+        "pytest",
+        "--cov",
+        "--cov-report",
+        "term-missing",
+        "--cov-report",
+        "xml:cov.xml",
+    )
 
 
 @nox.session
