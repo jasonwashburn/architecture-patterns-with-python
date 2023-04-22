@@ -31,6 +31,20 @@ def test(session) -> None:
 
 
 @nox.session
+def update_deps(session) -> None:
+    session.install("pip-tools")
+    session.run("pip-compile", "--upgrade", "-o", "requirements.txt", "pyproject.toml")
+    session.run(
+        "pip-compile",
+        "--upgrade",
+        "--extra=dev",
+        "-o",
+        "dev-requirements.txt",
+        "pyproject.toml",
+    )
+
+
+@nox.session
 def mypy(session) -> None:
     session.install("mypy")
     session.run("mypy", ".")
