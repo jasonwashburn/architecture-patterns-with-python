@@ -4,9 +4,9 @@
 
 # Install Python Development Tools
 pip install pipx
-pipx install hatch
 pipx install pre-commit
 pipx install ruff
+pipx install pip-tools
 
 # Install pre-commit hooks
 pre-commit install

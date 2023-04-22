@@ -25,7 +25,8 @@
 				"GitHub.copilot-labs",
 				"eamodio.gitlens",
 				"streetsidesoftware.code-spell-checker",
-				"GitHub.vscode-pull-request-github"
+				"GitHub.vscode-pull-request-github",
+				"tamasfe.even-better-toml"
 			]
 		}
 	},
