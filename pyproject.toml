@@ -1,12 +1,13 @@
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "architecture-patterns-with-python"
 version = "0.0.1"
 description = "Architecture Patterns with Python"
 dependencies = []
+
 
 [project.optional-dependencies]
 dev = [
@@ -19,6 +20,7 @@ dev = [
   "pre-commit",
   "mypy",
   "pip-tools",
+  "nox",
 ]
 
 [tool.ruff]
