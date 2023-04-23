@@ -17,9 +17,8 @@ def lint(session) -> None:
 
 @nox.session
 def test(session) -> None:
-    session.install("pytest")
-    session.install("pytest-xdist")
-    session.install("pytest-cov")
+    session.install("-r", "requirements.txt")
+    session.install("-r", "dev-requirements.txt")
     session.run(
         "pytest",
         "--cov",
@@ -46,5 +45,6 @@ def update_deps(session) -> None:
 
 @nox.session
 def mypy(session) -> None:
-    session.install("mypy")
+    session.install("-r", "requirements.txt")
+    session.install("-r", "dev-requirements.txt")
     session.run("mypy", ".")

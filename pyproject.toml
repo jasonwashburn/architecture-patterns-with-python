@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "architecture-patterns-with-python"
 version = "0.0.1"
 description = "Architecture Patterns with Python"
-dependencies = []
+dependencies = ["sqlalchemy<2"]
 
 
 [project.optional-dependencies]
@@ -21,6 +21,7 @@ dev = [
   "mypy",
   "pip-tools",
   "nox",
+  "sqlalchemy-stubs",
 ]
 
 [tool.ruff]

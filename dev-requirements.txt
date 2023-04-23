@@ -26,6 +26,8 @@ execnet==1.9.0
     # via pytest-xdist
 filelock==3.12.0
     # via virtualenv
+greenlet==2.0.2
+    # via sqlalchemy
 identify==2.5.22
     # via pre-commit
 iniconfig==2.0.0
@@ -33,7 +35,9 @@ iniconfig==2.0.0
 isort==5.12.0
     # via architecture-patterns-with-python (pyproject.toml)
 mypy==1.2.0
-    # via architecture-patterns-with-python (pyproject.toml)
+    # via
+    #   architecture-patterns-with-python (pyproject.toml)
+    #   sqlalchemy-stubs
 mypy-extensions==1.0.0
     # via
     #   black
@@ -75,8 +79,14 @@ pyyaml==6.0
     # via pre-commit
 ruff==0.0.262
     # via architecture-patterns-with-python (pyproject.toml)
+sqlalchemy==1.4.47
+    # via architecture-patterns-with-python (pyproject.toml)
+sqlalchemy-stubs==0.4
+    # via architecture-patterns-with-python (pyproject.toml)
 typing-extensions==4.5.0
-    # via mypy
+    # via
+    #   mypy
+    #   sqlalchemy-stubs
 virtualenv==20.22.0
     # via
     #   nox

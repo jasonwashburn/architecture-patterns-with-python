@@ -15,6 +15,9 @@
     "python.defaultInterpreterPath": "venv/bin/python",
     "python.terminal.activateEnvironment": true,
     "cSpell.words": [
-        "skus"
+        "orderline",
+        "sessionmaker",
+        "skus",
+        "SOAPDISH"
     ],
 }
