@@ -15,7 +15,7 @@ class Batch:
         self.sku = sku
         self.eta = eta
         self._purchased_quantity = qty
-        self._allocated: set[OrderLine] = set()
+        self._allocations: set[OrderLine] = set()
 
     def __eq__(self, other):
         if not isinstance(other, Batch):
@@ -34,15 +34,15 @@ class Batch:
 
     def allocate(self, line: OrderLine) -> None:
         if self.can_allocate(line):
-            self._allocated.add(line)
+            self._allocations.add(line)
 
     def deallocate(self, line) -> None:
-        if line in self._allocated:
-            self._allocated.remove(line)
+        if line in self._allocations:
+            self._allocations.remove(line)
 
     @property
     def allocated_quantity(self) -> int:
-        return sum(line.qty for line in self._allocated)
+        return sum(line.qty for line in self._allocations)
 
     @property
     def available_quantity(self) -> int:
